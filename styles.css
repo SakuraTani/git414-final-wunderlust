@@ -1,10 +1,4 @@
-/* Sakura Tanikawa */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* Sakura Tanikawa CSS Reset (Based on Meyer Reset v2.0 | 20110126 | Public Domain) */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,68 +8,70 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
+    box-sizing: border-box;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:wght@100;400;700&display=swap');
 
-:root{
+:root {
     --yellow: #F6D64A;
     --teal: #55BCD5;
     --purple: #9B26B0;
     --blue: #499BD2;
-    --darkgray:#222222;
-    --lightgray:#EAEAEA;
-    --white:#FFFFFF;
-    --black:#000000;
+    --darkgray: #222222;
+    --lightgray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
     --font-molle: "Molle", cursive;
-    --font-Montserrat: "Montserrat", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
 }
 
-nav li a {
-    text-decoration: none;   /* 下線を消す */
-    color: inherit;          /* 親要素の色を引き継ぐ */
-    font-weight: normal;     /* 太字を解除（必要に応じて） */
-    font-style: normal;      /* 斜体を解除（必要に応じて） */
+nav a {
+    text-decoration: none;
+    color: inherit;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     font-family: var(--font-molle);
-    padding: ;
 }
 
 h1 {
@@ -83,26 +79,23 @@ h1 {
     padding-top: 10px;
 }
 
-h2{
+h2 {
     font-size: 40pt;
 }
 
-h3{
+h3 {
     font-size: 35pt;
 }
 
-h4{
+h4 {
     font-size: 25pt;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: var(--font-montserrat);
 }
 
-p, q, nav, a, form {
-    font-size: 15pt;
-}
-
-h4, p, q, small, nav, button, form {
-    font-family: var(--font-Montserrat);
+p, q, nav, a, form, button, small {
+    font-family: var(--font-montserrat);
 }
 
 p {
@@ -111,49 +104,41 @@ p {
     font-weight: 100;
 }
 
-#skip{
+#skip {
     position: absolute;
     left: -10000px;
-    top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-  }
-
-#skip:focus{
-    position: static;
-    width: auto;
-    height: auto;
-  }
+}
 
 .sr-only {
     position: absolute;
     left: -10000px;
-    top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-  }
-
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-header{
+.sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+header {
     background: linear-gradient(to bottom, var(--teal), var(--white));
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: end;
-  }
+}
 
-header h1{
+header h1 {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
 }
 
-header p{
+header p {
     font-size: 1.5em;
     grid-column: 1 / 3;
     grid-row: 3 / 4;
@@ -162,18 +147,14 @@ header p{
 
 #menu-toggle input[type="checkbox"] {
     display: none;
-  }
-
-
-#logo img {
-    display: block; /* インラインの隙間を解消 */
-    max-width: 70%; /* レスポンシブ対応 */
-    height: auto;
-    margin: 0 auto; /* 中央揃え */
 }
 
-
-
+#logo img {
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+}
 
 #intro {
     display: flex;
@@ -208,16 +189,15 @@ img {
 
 #plan img {
     max-width: 80%;
-    justify-self: center;
     padding-top: 1em;
 }
 
-#plan div{
+#plan div {
     display: grid;
     justify-items: center;
 }
 
-#testimonials{
+#testimonials {
     padding: 2em;
 }
 
@@ -231,30 +211,23 @@ img {
     gap: 1em;
 }
 
-#testimonials section{
+#testimonials section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-
-
-
-
-
-
 
 #about {
     background-color: var(--blue);
     padding: 3em 0;
 }
 
-#about img{
+#about img {
     width: 70%;
     height: 70%;
 }
 
-#about div{
+#about div {
     padding-top: 2em;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -262,66 +235,51 @@ img {
     gap: 1em;
 }
 
-#about section{
+#about section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
 }
 
-#contact h3{
+#contact h3 {
     padding-top: 1em;
     display: flex;
     align-items: center;
     gap: 1.5em;
-
 }
+
 form {
-    display: block;
     width: 80%;
     padding: 1em;
     margin: 0 auto;
-    font-family: var(--font-Montserrat);
     color: var(--darkgray);
-  }
-
-fieldset input[type="radio"]:focus,
-fieldset input[type="radio"]:focus-visible {
-  outline: none;
-  box-shadow: none;
-  border-color: var(--purple); /* 必要に応じて色調整 */
 }
-  
-  /* ラベルとfieldsetはブロックで幅95%、大文字に */
-  label,
-  fieldset {
+
+label, fieldset {
     display: block;
     width: 95%;
     text-transform: uppercase;
-    margin: 0.75em 0 0.25em 0;
+    margin: 0.75em 0 0.25em;
     color: var(--darkgray);
-    font-weight: bolder;
-  }
-  
-  /* 必須マーク */
-  .required,
-  .form-required {
+    font-weight: bold;
+}
+
+.required, .form-required {
     color: var(--purple);
     font-size: 1.1em;
     font-weight: bold;
     display: inline-block;
-  }
-  
-  .form-required {
+}
+
+.form-required {
     font-weight: 300;
     color: var(--black);
     font-style: italic;
     font-size: 25px;
-    font-family: var(--font-Montserrat);
-  }
-  
-  /* input全体 */
-  input {
+}
+
+input {
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -332,42 +290,37 @@ fieldset input[type="radio"]:focus-visible {
     border-radius: 3px;
     height: 3em;
     margin-bottom: 1em;
-  }
-  
-  /* input[type="radio"], input[type="checkbox"] */
-  fieldset input[type="radio"],
-  fieldset input[type="checkbox"] {
+}
+
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
     transform: scale(2.5);
     margin-right: 5px;
     accent-color: var(--purple);
-    border: var(--purple);
-  }
-  
-  input[type="radio"]:focus {
+}
+
+fieldset input[type="radio"]:focus {
     outline: none;
-  }
-  
-  /* fieldset */
-  fieldset {
+    border-color: var(--purple);
+}
+
+fieldset {
     padding-left: 1em;
-    margin: 1em 0 0.25em 0;
+    margin: 1em 0 0.25em;
     width: 100%;
     display: flex;
     flex-direction: column;
-  }
-  
-  fieldset label {
+}
+
+fieldset label {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     gap: 3em;
-  }
-  
-  /* submitボタン */
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     padding: 0.75em;
     width: 100%;
-    height: auto;
     color: var(--white);
     background-color: var(--purple);
     border: none;
@@ -375,43 +328,35 @@ fieldset input[type="radio"]:focus-visible {
     cursor: pointer;
     font-weight: bold;
     border-radius: 3px;
-  }
-  
-  /* カスタムセレクトの親 */
-  .custom-select {
+}
+
+.custom-select {
     position: relative;
     width: 100%;
-    box-sizing: border-box;
     margin: 1em 0;
-  }
-  
-  /* セレクト本体 */
-  .custom-select select {
+}
+
+.custom-select select {
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     width: 100%;
     padding: 15px 0.5em;
     font-size: 1em;
     color: var(--darkgray);
     border: 1px solid var(--purple);
     border-radius: 3px;
-    background-color: #fff;
+    background-color: var(--white);
     cursor: pointer;
     height: 3em;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    box-sizing: border-box;
-  }
-  
-  /* セレクト フォーカス */
-  .custom-select select:focus {
+}
+
+.custom-select select:focus {
     outline: none;
     border-color: var(--blue);
     box-shadow: 0 0 5px rgba(128, 0, 128, 0.5);
-  }
-  
-  /* セレクトの矢印 */
-  .custom-select::after {
+}
+
+.custom-select::after {
     content: "⌄";
     position: absolute;
     top: 50%;
@@ -420,48 +365,45 @@ fieldset input[type="radio"]:focus-visible {
     font-size: 1em;
     color: var(--purple);
     pointer-events: none;
-  }
-  
-  /* inputフォーカス時 */
-  input:focus {
+}
+
+input:focus {
     border-color: var(--blue);
     box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
     border-radius: 4px;
-  }
-  
-  /* エラースタイル */
-  input:error {
+}
+
+input:error {
     border-color: red;
-  }
-  
-  footer{
+}
+
+footer {
     padding: 2em;
     background-color: var(--lightgray);
     display: flex;
     gap: 2.5em;
-  }
+}
 
-  footer a {
-    color: inherit;        
-    text-decoration: none; 
-  }
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
 
+.form-required {
+    font-family: var(--font-montserrat);
+    font-style: italic;
+}
 
-  
- @media screen and (min-width: 428px){
-   
-    
-
-
-    header nav ul{
+@media screen and (min-width: 428px) {
+    header nav ul {
         display: none;
     }
 
-    header{
+    header {
         padding: 1em 0 1em 1em;
     }
 
-    #intro h2, #intro p, h3{
+    #intro h2, #intro p, h3 {
         padding: 0 1em;
     }
 
@@ -471,25 +413,25 @@ fieldset input[type="radio"]:focus-visible {
         gap: 1em;
     }
 
-    footer{
+    footer {
         flex-direction: column;
         align-items: center;
     }
-  }
+}
 
-  @media screen and (min-width: 768px){
-    header{
+@media screen and (min-width: 768px) {
+    header {
         grid-template-columns: 1fr 1.5fr;
         padding: 5em;
     }
 
-    header h1{
-        grid-column: 2 /3;
+    header h1 {
+        grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
 
-    header p{
-        grid-column: 2 /3;
+    header p {
+        grid-column: 2 / 3;
         grid-row: 2 / 3;
     }
 
@@ -504,13 +446,13 @@ fieldset input[type="radio"]:focus-visible {
         padding-top: 2em;
     }
 
-    header nav ul{
+    header nav ul {
         display: flex;
         justify-content: space-evenly;
         gap: 1em;
     }
 
-    header nav ul li{
+    header nav ul li {
         background-color: var(--white);
         color: var(--black);
         padding: 1em;
@@ -519,7 +461,7 @@ fieldset input[type="radio"]:focus-visible {
         text-align: center;
     }
 
-    header nav ul li:hover{
+    header nav ul li:hover {
         background-color: var(--yellow);
     }
 
@@ -527,9 +469,7 @@ fieldset input[type="radio"]:focus-visible {
         display: none;
     }
 
-
-
-    h3{
+    h3 {
         margin-left: 5%;
     }
 
@@ -538,57 +478,51 @@ fieldset input[type="radio"]:focus-visible {
     }
 
     #img-grid {
-        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
-    #img-grid picture{
+    #img-grid picture {
         grid-column: 1 / -1;
     }
 
-    #plan div{
+    #plan div {
         grid-template-columns: 1fr 1fr;
-        justify-items: center;
         gap: 1em;
-        justify-content: center;
         margin: 0 3em;
     }
 
     #testimonials div {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 0 4em;
     }
 
-    #about div{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    #about div {
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1000px;
         margin: 0 auto;
     }
 
-    form{
+    form {
         width: 80%;
     }
 
-    fieldset{
+    fieldset {
         flex-direction: row;
     }
 
     input[type="submit"] {
         width: 50%;
         margin-left: 50%;
-      }
+    }
 
-    footer{
+    footer {
         flex-direction: row;
         justify-content: center;
-        align-items: center;
     }
-    
-  }
+}
 
-  @media screen and (min-width: 1920px){
-    header{
+@media screen and (min-width: 1920px) {
+    header {
         grid-template-columns: 1fr 2fr 2fr;
         padding: 0;
     }
@@ -604,23 +538,21 @@ fieldset input[type="radio"]:focus-visible {
         grid-row: 2 / 4;
     }
 
-    header h1{
-        grid-column: 2 /3;
+    header h1 {
+        grid-column: 2 / 3;
         grid-row: 2 / 3;
     }
 
-    header p{
-        grid-column: 2 /3;
+    header p {
+        grid-column: 2 / 3;
         grid-row: 3 / 4;
     }
-
 
     #intro {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         width: 90%;
         margin: 0 auto;
-
     }
 
     #intro p, #intro h2 {
@@ -641,12 +573,12 @@ fieldset input[type="radio"]:focus-visible {
         padding: 4em 0;
     }
 
-    #plan div{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    #plan div {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     #testimonials div {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
     }
 
     form {
@@ -655,17 +587,14 @@ fieldset input[type="radio"]:focus-visible {
         justify-content: center;
         gap: 1em;
         width: 90%;
-        box-sizing: border-box;
-      }
-      
-      form > div {
-        flex-grow: 1;
-        min-width: 250px; /* ここで各パートの最小幅指定 */
-      }
+    }
 
-      footer p {
+    form > div {
         flex-grow: 1;
-      }
-      
-  }
+        min-width: 250px;
+    }
 
+    footer p {
+        flex-grow: 1;
+    }
+}
